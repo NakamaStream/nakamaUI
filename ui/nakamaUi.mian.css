@@ -1,0 +1,134 @@
+/*
+ * Derechos de autor © 2024 nakamaGroup.
+ * Esta librería es para tus contenedores de animes o "cards".
+ * Este es un diseño principal utilizado en nakamaStream.
+ * Licencia: Código abierto.
+ * Repositorio de GitHub: https://github.com/NakamaStream/nakamaUI
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilo del contenedor principal de la card */
+.nakama-card {
+  width: 220px; /* Ancho de la tarjeta */
+  height: 320px; /* Alto de la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Esconde cualquier contenido que sobresalga */
+  background-color: #141414; /* Color de fondo oscuro */
+  position: relative; /* Permite posicionar elementos hijos de forma absoluta */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves para efectos */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  margin: 10px; /* Espacio alrededor de la tarjeta */
+  font-family: 'Roboto', sans-serif; /* Fuente utilizada en la tarjeta */
+}
+
+/* Efecto hover: aumenta el tamaño y agrega sombra */
+.nakama-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+  z-index: 5; /* Asegura que la tarjeta esté por encima de otras */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Agrega sombra al contenedor */
+}
+
+/* Estilo de la imagen principal dentro de la tarjeta */
+.nakama-card img {
+  width: 100%; /* Ocupa el ancho total del contenedor */
+  height: 100%; /* Ocupa la altura total del contenedor */
+  object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+  transition: opacity 0.3s ease-in-out; /* Transición suave para cambios de opacidad */
+}
+
+/* Efecto hover en la imagen: reduce la opacidad */
+.nakama-card:hover img {
+  opacity: 0.3; /* Reduce la opacidad al pasar el mouse */
+}
+
+/* Estilo del título centrado dentro de la tarjeta */
+.nakama-card .nakama-title {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 100px; /* Distancia desde el fondo */
+  left: 0; /* Alineación a la izquierda */
+  right: 0; /* Alineación a la derecha */
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: 500; /* Grosor de la fuente */
+  color: white; /* Color del texto */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease-in-out; /* Transición suave para opacidad */
+}
+
+/* Efecto hover: muestra el título */
+.nakama-card:hover .nakama-title {
+  opacity: 1; /* Hace visible el título al pasar el mouse */
+}
+
+/* Estilo de la descripción centrada con scrollbar estilizado */
+.nakama-card .nakama-description {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 50px; /* Distancia desde el fondo */
+  left: 10px; /* Margen izquierdo */
+  right: 10px; /* Margen derecho */
+  text-align: center; /* Centra el texto */
+  font-size: 12px; /* Tamaño de la fuente */
+  color: #b3b3b3; /* Color del texto */
+  max-height: 50px; /* Altura máxima para la descripción */
+  overflow-y: auto; /* Agrega un scrollbar vertical si es necesario */
+  padding: 0 5px; /* Padding horizontal */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease-in-out; /* Transición suave para opacidad */
+}
+
+/* Estilo del scrollbar en la descripción */
+.nakama-description::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+.nakama-description::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del "pulgar" del scrollbar */
+  border-radius: 4px; /* Bordes redondeados del "pulgar" */
+}
+
+.nakama-description::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color al pasar el ratón sobre el "pulgar" */
+}
+
+/* Efecto hover: muestra la descripción */
+.nakama-card:hover .nakama-description {
+  opacity: 1; /* Hace visible la descripción al pasar el mouse */
+}
+
+/* Estilo de la etiqueta dinámica en la tarjeta */
+.nakama-tag {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la parte izquierda */
+  background-color: var(--tag-color, #ff6b6b); /* Color de fondo de la etiqueta */
+  color: white; /* Color del texto de la etiqueta */
+  padding: 4px 8px; /* Espaciado interno de la etiqueta */
+  font-size: 12px; /* Tamaño de la fuente */
+  font-weight: bold; /* Grosor de la fuente */
+  border-radius: 8px; /* Bordes redondeados */
+  display: none; /* Ocultar inicialmente */
+}
+
+/* Efecto hover: muestra la etiqueta */
+.nakama-card:hover .nakama-tag {
+  display: block; /* Muestra la etiqueta al pasar el mouse */
+}
+
+/* Estilo del contenedor de capítulos dentro de la tarjeta */
+.nakama-chapters {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 10px; /* Distancia desde el fondo */
+  left: 10px; /* Margen izquierdo */
+  right: 10px; /* Margen derecho */
+  text-align: left; /* Alinear texto a la izquierda */
+  font-size: 12px; /* Tamaño de la fuente */
+  color: #b3b3b3; /* Color del texto */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease-in-out; /* Transición suave para opacidad */
+}
+
+/* Efecto hover: muestra la cantidad de capítulos */
+.nakama-card:hover .nakama-chapters {
+  opacity: 1; /* Hace visible la cantidad de capítulos al pasar el mouse */
+}
