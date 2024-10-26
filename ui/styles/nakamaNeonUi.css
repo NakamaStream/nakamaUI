@@ -1,0 +1,128 @@
+/*
+ * Derechos de autor © 2024 nakamaGroup.
+ * Plantilla: nakamaNeonUi
+ * Esta librería es para tus contenedores de animes o "cards".
+ * Este es un diseño principal utilizado en nakamaStream.
+ * Licencia: Código abierto.
+ * Repositorio de GitHub: https://github.com/NakamaStream/nakamaUI
+*/
+
+/* Importación de fuentes personalizadas desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Estilo del contenedor principal de la card */
+.nakama-neon-card {
+  width: 250px;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #141414;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Efecto hover: eleva la tarjeta y agrega sombra */
+.nakama-neon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 107, 107, 0.5);
+}
+
+/* Estilo de la imagen principal dentro de la tarjeta */
+.nakama-neon-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en la imagen: aumenta ligeramente el tamaño */
+.nakama-neon-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay con gradiente */
+.nakama-neon-overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.nakama-neon-card:hover .nakama-neon-overlay {
+  opacity: 1;
+}
+
+/* Contenedor para el contenido superpuesto */
+.nakama-neon-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+.nakama-neon-card:hover .nakama-neon-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo de la etiqueta */
+.nakama-neon-tag {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del título */
+.nakama-neon-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 107, 107, 0.8);
+}
+
+/* Estilo de la descripción */
+.nakama-neon-description {
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 1;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo del contador de capítulos */
+.nakama-neon-chapters {
+  font-size: 14px;
+  color: #ff8c8c;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 107, 107, 0.8);
+}
