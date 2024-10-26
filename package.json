@@ -1,0 +1,25 @@
+{
+  "name": "nakamaui",
+  "version": "1.0.0",
+  "description": "Esta librería permite crear y gestionar contenedores de anime, conocidos como cards. Diseñada para ser atractiva y fácil de usar",
+  "main": "styles.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "nakamaui",
+    "style",
+    "css-component"
+  ],
+  "author": "NakamaGroup",
+  "license": "MIT",
+  "homepage": "https://github.com/NakamaStream/nakamaUI",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NakamaStream/nakamaUI.git"
+  }
+}
