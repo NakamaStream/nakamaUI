@@ -29,3 +29,32 @@ npm i nakamaui
 ```bash
 <link rel="stylesheet" href="/node_modules/nakamaui/ui/nakamaUi.mian.css">
 ```
+
+# Componentes
+
+## Estructura HTML de una tarjeta ``(nakama-card)``
+
+Cada Componente depende de la platilla que usas pero estos son los
+componentes de la plantilla 'Original'
+
+```html
+<div class="nakama-card">
+  <img src="anime-image.jpg" alt="Anime Image">
+  <span class="nakama-tag">Nuevo</span>
+  <div class="nakama-title">Título del Anime</div>
+  <div class="nakama-description">Descripción breve del anime.</div>
+  <div class="nakama-chapters">Capítulos: 12</div>
+</div>
+```
+
+## Descripción de cada componente HTML
+
+``img``: Contiene la imagen principal del anime que llenará toda la tarjeta.
+
+- ``.nakama-tag``: Etiqueta que aparecerá al pasar el mouse y mostrará información dinámica, como "Nuevo" o "Popular".
+
+- ``.nakama-title``: Muestra el título del anime, que aparecerá al pasar el mouse sobre la tarjeta.
+
+- ``.nakama-description``: Breve descripción del anime, visible al pasar el mouse.
+
+- ``.nakama-chapters``: Información de la cantidad de capítulos.
