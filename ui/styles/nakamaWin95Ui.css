@@ -185,3 +185,52 @@
     border: 1px solid;
     border-color: #ffffff #808080 #808080 #ffffff;
 }
+
+/* Media Queries para ajustar la ventana en pantallas pequeñas */
+@media (max-width: 768px) {
+    .nakama-win95-window {
+        width: 250px; /* Ancho reducido */
+        height: 350px; /* Alto reducido */
+    }
+
+    .nakama-win95-title {
+        font-size: 10px; /* Tamaño de fuente reducido */
+    }
+
+    .nakama-win95-title-button {
+        width: 14px; /* Ancho reducido para los botones */
+        height: 12px; /* Alto reducido para los botones */
+        font-size: 9px; /* Tamaño de fuente reducido para el texto de los botones */
+    }
+
+    .nakama-win95-description,
+    .nakama-win95-chapters {
+        font-size: 11px; /* Tamaño de fuente reducido */
+    }
+}
+
+@media (max-width: 480px) {
+    .nakama-win95-window {
+        width: 100%; /* Ancho completo */
+        height: auto; /* Alto automático */
+    }
+
+    .nakama-win95-content {
+        padding: 4px; /* Ajuste en el padding */
+    }
+
+    .nakama-win95-title {
+        font-size: 9px; /* Tamaño de fuente reducido */
+    }
+
+    .nakama-win95-title-button {
+        width: 12px; /* Ancho reducido para los botones */
+        height: 10px; /* Alto reducido para los botones */
+        font-size: 8px; /* Tamaño de fuente reducido para el texto de los botones */
+    }
+
+    .nakama-win95-description,
+    .nakama-win95-chapters {
+        font-size: 10px; /* Tamaño de fuente reducido */
+    }
+}
