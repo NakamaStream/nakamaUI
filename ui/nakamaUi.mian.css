@@ -6,6 +6,7 @@
  * Repositorio de GitHub: https://github.com/NakamaStream/nakamaUI
 */
 
+/* Importación de fuentes personalizadas desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Estilo del contenedor principal de la card */
@@ -131,4 +132,49 @@
 /* Efecto hover: muestra la cantidad de capítulos */
 .nakama-card:hover .nakama-chapters {
   opacity: 1; /* Hace visible la cantidad de capítulos al pasar el mouse */
+}
+
+/* Media Queries para ajustar la tarjeta en pantallas pequeñas */
+@media (max-width: 768px) {
+  .nakama-card {
+    width: 180px; /* Ancho reducido */
+    height: 260px; /* Alto reducido */
+  }
+
+  .nakama-card .nakama-title {
+    font-size: 14px; /* Tamaño de fuente reducido */
+    bottom: 80px; /* Ajuste en la posición */
+  }
+
+  .nakama-card .nakama-description {
+    font-size: 11px; /* Tamaño de fuente reducido */
+    max-height: 40px; /* Altura máxima reducida */
+  }
+
+  .nakama-tag {
+    font-size: 11px; /* Tamaño de fuente reducido */
+  }
+
+  .nakama-chapters {
+    font-size: 11px; /* Tamaño de fuente reducido */
+  }
+}
+
+@media (max-width: 480px) {
+  .nakama-card {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Alto automático */
+  }
+
+  .nakama-card .nakama-title {
+    bottom: 60px; /* Ajuste en la posición */
+  }
+
+  .nakama-card .nakama-description {
+    max-height: 60px; /* Altura máxima aumentada */
+  }
+
+  .nakama-chapters {
+    bottom: 5px; /* Ajuste en la posición */
+  }
 }
