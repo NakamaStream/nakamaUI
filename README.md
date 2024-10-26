@@ -1,5 +1,5 @@
 <h1 align="center">
-NakamaStream
+NakamaUi
 </h1>
 
 <p align="center">
@@ -27,7 +27,7 @@ npm i nakamaui
 ## importar a html
 
 ```bash
-<link rel="stylesheet" href="/node_modules/nakamaui/ui/nakamaUi.mian.css">
+<link rel="stylesheet" href="/node_modules/nakamaui/Ui/nakamaUi.mian.css">
 ```
 
 # Componentes
@@ -58,3 +58,13 @@ componentes de la plantilla 'Original'
 - ``.nakama-description``: Breve descripción del anime, visible al pasar el mouse.
 
 - ``.nakama-chapters``: Información de la cantidad de capítulos.
+
+# Importar Plantillas
+
+## Plantillas en total:
+
+```html
+<link rel="stylesheet" href="/node_modules/nakamaui/Ui/nakamaUi.mian.css">
+<link rel="stylesheet" href="/node_modules/nakamaui/Ui/styles/nakamaNeonUi.css">
+<link rel="stylesheet" href="/node_modules/nakamaui/Ui/styles/nakamaWin95Ui.css">
+```
