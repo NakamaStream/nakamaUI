@@ -24,6 +24,20 @@ es una biblioteca de componentes CSS destinada a la creación de contenedores y 
 npm i nakamaui
 ```
 
+## CDN
+
+```bash
+https://unpkg.com/nakamaui@1.0.2/Ui/nakamaUi.mian.css - Estilo principal
+```
+
+```bash
+https://unpkg.com/nakamaui@1.0.2/Ui/styles/nakamaNeonUi.css - Estilo Neon
+```
+
+```bash
+https://unpkg.com/nakamaui@1.0.2/Ui/styles/nakamaWin95Ui.css - Estilo Win95Ui
+```
+
 ## importar a html
 
 ```bash
