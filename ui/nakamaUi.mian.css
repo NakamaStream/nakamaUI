@@ -55,6 +55,7 @@
   color: white; /* Color del texto */
   opacity: 0; /* Inicialmente oculto */
   transition: opacity 0.3s ease-in-out; /* Transición suave para opacidad */
+  padding: 0 5px; /* Padding horizontal para evitar solapamiento */
 }
 
 /* Efecto hover: muestra el título */
@@ -143,12 +144,14 @@
 
   .nakama-card .nakama-title {
     font-size: 14px; /* Tamaño de fuente reducido */
-    bottom: 80px; /* Ajuste en la posición */
+    bottom: 90px; /* Ajuste en la posición para evitar solapamiento */
+    padding: 0 8px; /* Padding aumentado para mejor legibilidad */
   }
 
   .nakama-card .nakama-description {
     font-size: 11px; /* Tamaño de fuente reducido */
     max-height: 40px; /* Altura máxima reducida */
+    bottom: 40px; /* Ajuste en la posición para evitar solapamiento */
   }
 
   .nakama-tag {
@@ -164,17 +167,21 @@
   .nakama-card {
     width: 100%; /* Ancho completo */
     height: auto; /* Alto automático */
+    min-height: 320px; /* Altura mínima para mantener la estructura */
   }
 
   .nakama-card .nakama-title {
-    bottom: 60px; /* Ajuste en la posición */
+    bottom: 120px; /* Ajuste en la posición para evitar solapamiento */
+    padding: 0 15px; /* Padding aumentado para mejor legibilidad */
   }
 
   .nakama-card .nakama-description {
-    max-height: 60px; /* Altura máxima aumentada */
+    bottom: 60px; /* Ajuste en la posición */
+    max-height: 50px; /* Altura máxima ajustada */
+    margin-bottom: 10px; /* Margen adicional para separar del contenido inferior */
   }
 
   .nakama-chapters {
-    bottom: 5px; /* Ajuste en la posición */
+    bottom: 15px; /* Ajuste en la posición */
   }
 }
