@@ -1,6 +1,6 @@
 {
   "name": "nakamaui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Esta librería permite crear y gestionar contenedores de anime, conocidos como cards. Diseñada para ser atractiva y fácil de usar",
   "main": "styles.js",
   "type": "commonjs",
